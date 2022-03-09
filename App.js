@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import Header from './src/components/Header';
 import Search from './src/components/Search';
 import Categories from './src/components/Categories';
+import Restaurants from './src/components/Restaurants';
 
 export default function App() {
   const [term, setTerm] = useState('Burger');
@@ -41,6 +42,7 @@ export default function App() {
       <Search setTerm={setTerm} />
       <Categories categories={commonCategories} setTerm={setTerm} term={term} />
       <StatusBar />
+      <Restaurants term={term} />
     </View>
   );
 }
